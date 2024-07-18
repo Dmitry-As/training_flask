@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My internet store{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>Магазин музыкальных товаров</h1>
+    </header>
+    <div>
+        <ul class="nav nav-pills justify-content-end align-items-end">
+            <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
+            <li class="nav-item"><a href="/acou_guitars/" class="nav-link">Гитары акустические</a></li>
+            <li class="nav-item"><a href="/elec_guitars/" class="nav-link">Гитары электрические</a></li>
+            <li class="nav-item"><a href="/amplifiers/" class="nav-link">Усилители</a></li>
+        </ul>
+    </div>
+    <hr>    
+    <main>
+        {% block content %}
+            <p>Здесь скоро что нибудь появиться!</p>
+        {% endblock %}
+    </main>
+    <div class="row fixed-bottom modal-footer">
+        <hr>
+        <p>Все права защищены &copy;</p>
+    </div>
+</body>
+</html>

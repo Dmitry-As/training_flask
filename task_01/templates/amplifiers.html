@@ -1,0 +1,14 @@
+{% extends 'template.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div>
+        {% for amplifier in ampli %}
+        <p>{{amplifier.description}}</p>
+        <img src="/static/img/{{ amplifier.img }}" width="264" height="300" alt="Усилитель">
+        {% endfor %} 
+    </div>
+{% endblock %}
