@@ -1,0 +1,15 @@
+{% extends 'template.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="post">
+        <input type="text" name="username">
+        <input type="email" name="email">
+        <input type="submit" value="Send">
+    </form>
+</div>
+{% endblock %}
