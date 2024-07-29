@@ -1,5 +1,4 @@
 import argparse
-import asyncio
 from get import created_thread, created_multi, created_async
 
 
@@ -26,7 +25,7 @@ def parse():
     created_multi(urls)
 
     print(f'Загрузка с помощью asyncio')
-    asyncio.run(created_async(urls))
+    created_async(urls)
 
 
 if __name__ == "__main__":
