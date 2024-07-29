@@ -65,11 +65,13 @@ def created_multi(urls: list):
     logger.info(f'Task completed in {(time.time() - start_time):.2f} seconds')
     
 
-async def created_async(urls: list):
+def created_async(urls: list):
     start_time = time.time()
-    tasks = []
-    for url in urls:
-        task = asyncio.ensure_future(download_async_img(url))
-        tasks.append(task)
-    await asyncio.gather(*tasks)
+    async def created_tasks(urls: list):
+        tasks = []
+        for url in urls:
+            task = asyncio.ensure_future(download_async_img(url))
+            tasks.append(task)
+        await asyncio.gather(*tasks)
+    asyncio.run(created_tasks(urls))    
     logger.info(f'Task completed in {(time.time() - start_time):.2f} seconds')  
