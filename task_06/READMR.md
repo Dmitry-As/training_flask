@@ -17,17 +17,17 @@ uvicorn main:app --reload
 
 #### Пользователи
 
-POST /users/ - Создать нового пользователя
-GET /users/{user_id} - Получить пользователя по ID
-GET /users/ - Получить список пользователей
-DELETE /users/{user_id} - Удалить пользователя по ID
+POST /clients/ - Создать нового пользователя
+GET /clients/{client_id} - Получить пользователя по ID
+GET /clients/ - Получить список пользователей
+DELETE /clients/{client_id} - Удалить пользователя по ID
 
 #### Товары
 
-POST /products/ - Создать новый товар
-GET /products/{product_id} - Получить товар по ID
-GET /products/ - Получить список товаров
-DELETE /products/{product_id} - Удалить товар по ID
+POST /goods/ - Создать новый товар
+GET /goods/{goods_id} - Получить товар по ID
+GET /goods/ - Получить список товаров
+DELETE /goods/{goods_id} - Удалить товар по ID
 
 #### Заказы
 
